@@ -1,0 +1,230 @@
+.featured_container {
+    position: relative;
+    padding: 130px 0 90px;
+}
+
+.featured_wrapper {
+    padding: 0 30px;
+}
+
+.featured_header {
+    text-align: center;
+    margin-bottom: 220px;
+}
+
+.featured_header_title {
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 110%;
+}
+
+.featured_header_title span {
+    display: block;
+    text-shadow: none;
+    -webkit-text-stroke: .85px rgb(255, 255, 255);
+    color: transparent;
+}
+
+.featured_items {
+    margin: -40px -30px;
+}
+
+.featured_img {
+    max-width: 450px;
+    max-height: 450px;
+    margin: 0 auto;
+}
+
+.featured_img a {
+    position: relative;
+    display: block;
+    padding-bottom: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.featured_img a img {
+    max-width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 40px;
+    object-fit: cover; 
+}
+
+.featured_content {
+    max-width: 270px;
+    text-align: center;
+    margin: 40px auto 75px;
+}
+
+.featured_title, .featured_info {
+    display: inline;
+}
+
+.featured_title h3 {
+    display: inline;
+    font-size: 20px;
+    font-weight: 600;
+    /* line-height: 150%; */
+}
+
+.featured_info p {
+    display: inline;
+    font-size: 18px;
+    line-height: 1.8em;
+}
+
+.featured_tags {
+    display: none;
+}
+
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    .featured_container {
+        padding: 180px 0 175px;
+    }
+
+    .featured_wrapper {
+        padding: 0 100px;
+    }
+    
+    .featured_header {
+        text-align: left;
+        margin-bottom: 150px;
+    }
+    
+    .featured_header_title {
+        font-size: 3.35em;
+        letter-spacing: 1px;
+    }
+
+    .featured_items {
+        margin: -40px -80px;
+    }
+    
+    .featured_item {
+       /* display: inline-block;
+       vertical-align: top;
+       width: 49.7%;
+       padding: 20px 20px; */
+    }
+
+    .featured_img a {
+        width: auto;
+        height: auto;
+    }
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+    .featured_container {
+        padding: 280px 0 175px;
+    }
+
+    .featured_wrapper {
+        padding: 0 180px 0;
+    }
+
+    .featured_header_title {
+        font-size: 3.25em;
+        letter-spacing: 2px;
+    }
+
+    .featured_items {
+        margin: 0;
+        padding: 0;
+
+        /* outline: 12px solid rgb(0, 13, 255); */
+    }
+
+    .featured_item {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    .featured_img {
+        max-width: 50%;
+        max-height: unset;
+        margin: unset;
+
+        /* border: 5px solid rgb(255, 111, 0); */
+    }
+
+    .featured_img a {
+        width: 55vh;
+        height: 90vh;
+        /* max-width: 43vw; */
+        /* max-height: 71.81vw; */
+        text-align: left;      
+         
+        /* border: 4px solid rgb(255, 225, 0); */
+    }
+
+    .featured_img a img {
+        /* display: none; */
+        border-radius: 0;
+        /* border: 4px solid rgb(0, 255, 255) */
+    }
+
+    .featured_content {
+        max-width: 39%;
+        text-align: left;
+        margin: 0;
+    }
+
+    .featured_title h3 {
+        display: block;
+        font-size: 1.4vw;
+        font-weight: 400;
+        line-height: 1;
+    }
+
+    .featured_info p {
+        display: block;
+        margin: 40px 0 0 0;
+        font-size: 2.25vw;
+        line-height: 150%;
+    }
+
+    .featured_tags {
+        display: block;
+    }
+
+    .featured_tags p {
+        font-size: 1vw;
+        letter-spacing: .05em;
+        line-height: 156%;
+        color: rgba(255, 255, 255, 0.6);
+        margin: 40px 0 0 0;
+    }
+
+}
+
+/* Large Screens */
+@media screen and (min-width: 1600px) {
+
+    .featured_wrapper {
+        padding: 0 280px 0;
+    }
+
+    .featured_header_title {
+        font-size: 4em;
+        font-weight: 400;
+        letter-spacing: 3px;
+    }
+
+    .featured_img a {
+        width: 65vh;
+        height: 90vh;
+        /* max-width: 43vw; */
+        /* max-height: 71.81vw; */           
+    }
+}

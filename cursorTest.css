@@ -1,0 +1,138 @@
+body {
+   height: 100vh;
+   margin: 0;
+   background-color: black;
+   color: white;
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 45px;
+
+   /* border: 2px solid rgba(248, 10, 10, 0.951); */
+}
+
+.logo {
+   /* border: 2px solid rgb(147, 147, 255); */
+}
+
+.logo h1 {
+   font-size: 2em;
+}
+
+.menu_container {
+   width: 150px;
+   height: 175px;
+   position: relative;
+   display: flex;
+   /* padding: 40px 0 80px 40px; */
+   margin-right: -30px;
+   /* border: 2px solid rgb(224, 221, 27); */
+}
+
+.menu_btn {
+   width: 100%;
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: none;
+   margin: 0;
+   /* padding: 30px 65px; */
+   border: none;
+   cursor: pointer;
+}
+
+.menu {
+   display: none;
+   font-size: 1.35em;
+   color: rgb(255, 255, 255);
+   /* margin-left: 1.2em; */
+}
+
+.hamburger {
+   display: inline-block;
+   position: fixed;
+   top: 90px;
+   right: 50px;
+   width: 25px; 
+   z-index: 5000;
+}
+
+.hamburger::before {
+   content: "";
+   display: block;
+   position: absolute;
+   top: -20px;
+   right: -20px;
+   left: -20px;
+   bottom: -20px;
+   z-index: 300;
+}
+
+.menu_span {
+   position: relative;
+   display: block;
+   width: 100%;
+   height: 3px;
+   margin: 5px 0;
+   top: 0;
+   background: rgb(255, 255, 255);
+   transition: top 500ms 300ms, transform 500ms 800ms;
+}
+
+.menu_open .menu_span_top {
+   top: 4px;
+   transform: rotate(45deg) scale(1);
+   animation: menuOpenTop 300ms ease-in;
+}
+
+.menu_open .menu_span_bottom {
+   top: -3px;
+   transform: rotate(-45deg) scale(1);
+   animation: menuOpenBottom 300ms ease-in;
+   animation-direction: reverse;
+}
+
+
+/* Cursor Div */
+
+.cursorDiv {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 250;
+   pointer-events: none;
+   transition: transform 150ms ease-out;  
+}
+
+.cursorDiv::before {
+   content: '';
+   display: block;
+   position: relative;
+   top: -24px;
+   left: -24px;
+   width: 48px;
+   height: 48px;
+   transform: scale(0);
+   opacity: 0;
+   background-color: #ffffff;
+   border-radius: 50%;
+   transition: transform 250ms ease-in-out, opacity 100ms;
+}
+
+.cursorDiv.visible::before {
+   opacity: 1;
+   transform: scale(.2);
+}
+
+.cursorDiv.menu::before {
+   transform: scale(1.2);
+}
+
+.menu_container:hover .menu_span {
+   background: black;
+}

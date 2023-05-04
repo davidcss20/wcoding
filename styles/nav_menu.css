@@ -1,0 +1,258 @@
+/* .nav_wrapper {
+    display: block;
+} */
+
+.nav_backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.45); 
+    z-index: 120;
+    transform: translateX(100%);
+    transition: opacity 500ms ease-in-out, transform 600ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: rgb(134, 88, 200);
+    z-index: 120;
+    transform: translateX(100%);
+    transition: opacity 500ms ease-in-out, transform 600ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.menu_open .nav_container, .menu_open .nav_backdrop {
+    opacity: 1;
+    transform: translateX(0%);
+    z-index: 120;
+}
+
+.nav_content {
+    padding: 0 3em;
+}
+
+.nav_grid {
+    display: flex;
+}
+
+.nav_grid_col.left {
+    display: none;
+}
+
+.nav_title h3 {
+    font-size: .95em;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    padding-bottom: 1.85em;
+}
+
+.nav_menu {
+    position: relative;
+    z-index: 250;
+}
+
+.nav_menu_item {
+    position: relative;
+    /* padding: 0px 0; */
+    z-index: 250;
+}
+
+.nav_menu_item a span {
+    font-size: 1.1em;
+    line-height: 1em;
+    color: rgb(255, 255, 255);
+}
+
+.nav_social a {
+    font-size: .95em;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+.nav_social_item {
+    margin-bottom: 1em;
+}
+
+.nav_footer {
+    margin-top: 1.85em;
+}
+
+.contact_title h3 {
+    font-size: .95em;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    padding-bottom: .5em;
+}
+
+.nav_email a span {
+    font-size: .95em;
+    font-weight: 500;
+    letter-spacing: .45px;
+    color: rgb(255, 255, 255);
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    .nav_container {
+        width: 689px;
+        left: auto;
+    }
+
+    .nav_body {
+        margin-bottom: 3em;
+    }
+
+    .nav_content {
+        padding: 0 6em;
+    }
+
+    .nav_grid {
+        gap: 7.5em;
+    }
+
+    .nav_grid_col.left {
+        display: block;
+    }
+
+    .nav_grid_col.right .nav_title h3 {
+        padding-bottom: 1.25em;
+    }
+
+    .nav_menu {
+        position: relative;
+        width: 250px;
+    }
+
+    .nav_menu_item {
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .nav_menu_item a {
+        font-size: 3.1em;
+        line-height: 1.05;
+    }
+
+    .nav_social {
+        width: 87px;
+    }
+    
+    .nav_social_item {
+        height: 30px;
+    }
+    
+    .links {        
+        position: relative;
+        overflow: hidden;
+        z-index: 250;
+        /* outline: 2px solid red; */
+    }
+    
+    .links span {
+        position: absolute;
+        /* top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; */
+        transition: transform 400ms ease-out;
+        z-index: 250;
+    }
+
+    .links:hover.links a span {
+        transform: translate(0, -70px); 
+    }
+
+    .instagram::after {
+        content: "Instagram";
+        position: absolute;
+        left: 0;
+        bottom: -70px;
+    }
+
+    .facebook::after {
+        content: "Facebook";
+        position: absolute;
+        left: 0;
+        bottom: -70px;
+    }
+    .youtube::after {
+        content: "Youtube";
+        position: absolute;
+        left: 0;
+        bottom: -70px;
+    }
+    .twitter::after {
+        content: "Twitter";
+        position: absolute;
+        left: 0;
+        bottom: -70px;
+    }
+    
+    .campus::after {
+        content: "Campus";
+        position: absolute;
+        left: 0;
+        bottom: -70px;
+    }
+
+    .course::after {
+        content: "Course";
+        position: absolute;
+        left: 0;
+        bottom: -70px;
+    }
+
+    .about-us::after {
+        content: "About-Us";
+        position: absolute;
+        left: 0;
+        bottom: -70px;
+    }
+
+    .blogs::after {
+        content: "Blogs";
+        position: absolute;
+        left: 0;
+        bottom: -70px;
+    }
+
+    .contact::after {
+        content: "Contact";
+        position: absolute;
+        left: 0;
+        bottom: -70px;
+    }
+
+    .nav_footer { 
+        position: absolute;
+        width: 100%;
+        bottom: 50px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+    /* .nav_container {
+        width: 880px;
+    }
+
+    .nav_body {
+        margin-bottom: 12em;
+    } */
+
+    /* .nav_content {
+        padding: 0 0 0 6em;
+    } */
+
+    /* .nav_grid {
+        gap: 9em;
+    } */
+}
